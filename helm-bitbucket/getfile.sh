@@ -27,6 +27,7 @@ if [ -f $FILEPATH ]; then # if a file named $FILEPATH exists
   cat $FILEPATH
 else
   echo "Root path" >&2
+  cat $FILEPATH
   #echo "Error in plugin 'helm-git': $BRANCH:$FILEPATH does not exists" >&2
   #exit 1
 fi
