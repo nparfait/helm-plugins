@@ -424,11 +424,11 @@ EOF
     ${HELM_BIN} ${TILLER_HOST:+--host "$TILLER_HOST" }"$cmd" $subcmd "$@" "${cmdopts[@]}"
 
     # cleanup on-the-fly decrypted files
-    if [[ ${#decfiles[@]} -gt 0 ]] && rm "${decfiles[@]}"
-    #if [[ ${#decfiles[@]} -gt 0 ]]
-    #then
-   #    rm "${decfiles[@]}"
-    #fi
+    #if [[ ${#decfiles[@]} -gt 0 ]] && rm "${decfiles[@]}"
+    if [[ ${#decfiles[@]} -gt 0 ]]
+    then
+       rm "${decfiles[@]}"
+    fi
 }
 
 helm_command() {
